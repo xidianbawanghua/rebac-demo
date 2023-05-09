@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="rebac-demo-web:war">
+    <output-path>$PROJECT_DIR$/rebac-demo-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>rebac-demo-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="plat.war">
+      <element id="artifact" artifact-name="rebac-demo-web:war exploded" />
+    </root>
+  </artifact>
+</component>
