@@ -1,6 +1,7 @@
 package org.example.rpc;
 
-import org.example.rpc.DTO.WriteSchemaRequestDTO;
+import org.example.rpc.DTO.schema.ReadSchemaResponseDTO;
+import org.example.rpc.DTO.schema.WriteSchemaRequestDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -9,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 public interface SchemaFeignClient {
 
     @PostMapping("/v1/schema/write")
-    String writeSchema(@RequestHeader("Authorization") String token, WriteSchemaRequestDTO dto);
+    void writeSchema(@RequestHeader("Authorization") String token, WriteSchemaRequestDTO dto);
 
     @PostMapping("/v1/schema/read")
-    String readSchema(@RequestHeader("Authorization") String token);
+    ReadSchemaResponseDTO readSchema(@RequestHeader("Authorization") String token);
 }
