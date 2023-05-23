@@ -11,5 +11,5 @@ spring:
 
 spicedb:
   service:
-    url: http://localhost:3331
+    url: http://10.100.28.149:3331
   token: lx_token
